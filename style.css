@@ -1,116 +1,170 @@
-:root{
+:root {
     --Pale-blue: hsl(225, 100%, 94%);
     --Bright-blue: hsl(245, 75%, 52%);
-    --Bright-blue-hover:hsl(245, 100%, 69%);
+    --Bright-blue-hover: hsl(245, 100%, 69%);
     /*neutral*/
     --Very-pale-blue: hsl(225, 100%, 98%);
     --Desaturated-blue: hsl(224, 23%, 55%);
     --Dark-blue: hsl(223, 47%, 23%);
     /* shadows */
-    --shadow-light:rgba(114, 128, 167, .2);
-    --shadow-btn:rgba(56,41,224,0.5);
+    --shadow-light: rgba(114, 128, 167, .2);
+    --shadow-btn: rgba(56, 41, 224, 0.5);
 }
 
-body{background-color: var(--Pale-blue); font-family: 'Red Hat Display', sans-serif; padding: 72px 24px; text-align: center;background-image: url(images/pattern-background-mobile.svg);background-size: contain;background-position: top;background-repeat: no-repeat;}
+body {
+    background-color: var(--Pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 72px 24px;
+    text-align: center;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
 
-h1,h2{color:var(--Dark-blue);}
-h1{font-size: 2em;}
-h2{font-size: 1.2em;margin-bottom:-.8em;}
-p{color:var(--Desaturated-blue);font-size: 1em;line-height: 1.618em;}
-a{color:var(--Bright-blue);font-weight: 700;transition: .2s ease 0s;}
-a:hover{transform:scale(1.05);color:var(--Bright-blue-hover);}
-.radius{border-radius: 1.5em;}
-.max-width{max-width: 320px;}
+h1,
+h2 {
+    color: var(--Dark-blue);
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: -.8em;
+}
+
+p {
+    color: var(--Desaturated-blue);
+    font-size: 1em;
+    line-height: 1.618em;
+}
+
+a {
+    color: var(--Bright-blue);
+    font-weight: 700;
+    transition: .2s ease 0s;
+}
+
+a:hover {
+    transform: scale(1.05);
+    color: var(--Bright-blue-hover);
+    text-decoration: none;
+}
+
+.radius {
+    border-radius: 1.5em;
+}
+
+.max-width {
+    max-width: 320px;
+}
+
 /* CARD */
-.card{
+.card {
     max-width: 540px;
     background-color: white;
     -webkit-box-shadow: 0px 16px 32px -12px var(--shadow-light);
     box-shadow: 0px 16px 32px -12px var(--shadow-light);
 }
-.head-img{
-    width:100%;
+
+.head-img {
+    width: 100%;
     border-radius: 1.5em 1.5em 0 0;
 }
-.content{
-    display:flex;
+
+.content {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding:1em;
+    padding: 1em;
 }
+
 /* DESCRIPTION */
-.txt{
+.txt {
     margin-bottom: 1em;
-    max-width:33ch;
+    max-width: 33ch;
 }
+
 /* PRICE */
-.price{
+.price {
     background-color: var(--Very-pale-blue);
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     text-align: left;
     justify-content: space-between;
     margin-bottom: 1.5em;
-    width:90%;
-    padding:0 5%;
+    width: 90%;
+    padding: 0 5%;
 }
-.left{
-    display:flex;
+
+.left {
+    display: flex;
     flex-direction: row;
     align-items: center;
 }
-.icon{
+
+.icon {
     object-fit: cover;
     height: 100%;
-    margin-right:.5em;
+    margin-right: .5em;
 }
+
 /* BUTTONS */
-button{
-    width:100%;
-    padding:1em;
-    border:none;
-    border-radius:12px;
+button {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 12px;
     font-size: 1.2em;
     font-weight: 700;
     font-family: 'Red Hat Display', sans-serif;
     cursor: pointer;
     transition: .2s ease 0s;
 }
-button:hover{
+
+button:hover {
     transform: scale(1.05);
 }
-button.primary{
+
+button.primary {
     background-color: var(--Bright-blue);
-    color:white;
-    -webkit-box-shadow: 0px 16px 32px -12px var(--shadow-btn); 
+    color: white;
+    -webkit-box-shadow: 0px 16px 32px -12px var(--shadow-btn);
     box-shadow: 0px 16px 32px -12px var(--shadow-btn);
 }
-button.primary:hover{
+
+button.primary:hover {
     background-color: var(--Bright-blue-hover);
 }
-button.ghost{
-    background-color: rgba(0,0,0,0);
-    color:var(--Desaturated-blue);
-}
-button.ghost:hover{
-    color:var(--Dark-blue);
+
+button.ghost {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--Desaturated-blue);
 }
 
-@media screen and (min-width:376px){
-    body{
-        display:flex;
+button.ghost:hover {
+    color: var(--Dark-blue);
+}
+
+@media screen and (min-width:376px) {
+    body {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-image:url(images/pattern-background-desktop.svg);
+        background-image: url(images/pattern-background-desktop.svg);
         background-size: contain;
         background-position: top;
         background-repeat: no-repeat;
         background-color: var(--Pale-blue);
     }
-    .price{
-    width:66%;
-    padding:0 5%;
+
+    .price {
+        width: 66%;
+        padding: 0 5%;
     }
 }
